@@ -17,7 +17,7 @@ function calculadora (primeiroNumero, segundoNumero, operador){
        
        case "-" :
           return primeiroNumero - segundoNumero
-   
+          
        case "*":
         return primeiroNumero * segundoNumero
     
@@ -34,6 +34,10 @@ function calculadora (primeiroNumero, segundoNumero, operador){
    
     }
     
-    let resultado = calculadora(primeiroNumero, segundoNumero, operador)
-    console.log(`O resultado do calculo é ${resultado}`) 
-    
+    if (isNaN(primeiroNumero) || isNaN(segundoNumero)){
+      console.log('digite apenas numeros')
+    }else{
+      let resultado = calculadora(primeiroNumero, segundoNumero, operador)
+    console.log(`O resultado do calculo é ${resultado}`)
+
+    }
